@@ -1,6 +1,68 @@
 body{
-    background-color: #f0f0f0;
+    background: linear-gradient(179.1deg, rgb(247, 238, 238) -1.9%, rgb(247, 202, 201) 44.9%, rgb(145, 168, 208) 96.1%);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
 }
+#text-1{
+    display:block;
+    margin:0 auto;
+    padding: 20px;
+    text-align: center;
+    color: #0c293dfb;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+#intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    color: #0c293dfb;
+    font-size: 18px;
+}
+#form{
+    text-align: center;
+    padding: 20px;
+    left: 0px;
+    right:0px;
+}
+#poemOutput{
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f042;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    color: #333;
+}
+footer{
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    color: #0c293dfb;
+    font-size: 14px;
+}
+#generateButton{
+    background: radial-gradient(circle at 10% 20%, rgb(251, 222, 238) 15.6%, rgb(206, 201, 226) 80.3%);
+    color: black;
+    border: 1px solid #0c293dfb;   
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#generateButton:hover{
+    color: white;
+    background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+}
+input[type="text"]:focus {
+            outline: none;
+            border: 2px solid #8b709b;
+            box-shadow: 0 0 5px rgba(39, 71, 97, 0.5);
+        }
+input[type="text"] {
+        padding: 9px;
+        width: 150px;
+      }
