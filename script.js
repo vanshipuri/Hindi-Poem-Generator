@@ -1,16 +1,32 @@
-function generatePoem(event) {
-    event.preventDefault(); // Prevent the form from submitting normally
+function displayPoem(response) {
 
-    //alert("Generating your poem...");
-new Typewriter("h3", {
-  strings: `हरे भरे पेड़ों की छाँव में बसी है सुकून की बात,<br/> चिड़ियों की चहचहाहट में छिपा है प्रेम का अहसास।<br/>
-हरे भरे खेतों में लहराता है जीवन का उत्सव,<br/>नदियों की कलकल में बहे हैं खुशियों के राग। <br/>
-प्रकृति की हर साँस में छिपा है जीवन का जज़्बात।` ,
+    new Typewriter("h3", {
+  strings: response.data.answer, 
   autoStart: true,
   cursor: "",
   delay: 75
 });
 
+}
+
+function generatePoem(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+let instructioninput = document.querySelector("#topicInput");
+//Make call to api to generate poem
+let apiKey = "b7oe38a4fa56t17674f3f0a7f3738e9e";
+let prompt = `Generate a hindi poem about ${instructioninput.value}`;
+let context = "You area romantic Poem expert, love to write short hindi poems.Your mission is to generate a 4 line poem with a good hindi words.Make sure to follow the user instructions i.e Prompt  and seperate each line by using <br/> tag in html";
+let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`
+
+console.log("Generating poem");
+console.log(`Prompt: ${prompt}`);
+console.log(`Context: ${context}`);
+
+
+axios.get(apiUrl).then(displayPoem);
+
+    alert("Generating your poem...");
 
 //let poeminputElement = document.getElementById("poemOutput");
 //poeminputElement.innerHTML = ; 

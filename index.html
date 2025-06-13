@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div class="main">
@@ -14,7 +15,7 @@
  <div class="container">
  <form id="poemForm">
     <div id="intro"><h5><i>Enter a Topic for Your Poem:-</i></h5></div>
-   <div id="form"> <input type="text" id="topicInput" placeholder="e.g., Love, Nature, Life"  autofocus required>
+   <div id="form"> <input type="text" id="topicInput" placeholder="e.g., Love, Nature, Life" id="user-intruct" autofocus required>
     <button id="generateButton">Generate Poem</button></form></div>
     <div id="poemOutput" class="poem-output">
         <h3></h3>
